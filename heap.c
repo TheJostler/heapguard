@@ -24,10 +24,6 @@ char *allocstr(const char *str) {
  return alloc_str[n_alloc_str-1];
 }
 
-void allocstrlist(char **list, char *str) {
- //Ok now I need to copy the functionality from above but instead of simply allocating a string and recording the address to a builting cleanup function, I need to save the str pointer to an arbritary array and make sure that every item in each array is freed during freeall()
-}
-
 void freeall() {
  for(int i=0; i<n_alloc_str; i++) {
   printf("freeing:%s<-%p\n", alloc_str[i], &alloc_str[i]);
