@@ -1,7 +1,7 @@
 # heapguard
 This is a simple tool for managing all the memory allocated to the heap in a c program.
 
-It's purpose is to keep track of any memory allocated to the heap within a C program and to automatically free all the memory when the program exits. This ensures that no memory leaks occur, no sensative information is left in memory and speeds up the development process
+It's purpose is to keep track of any memory and to automatically wipe and free all the memory when the program exits. This ensures that no memory leaks occur, no sensative information is left in memory and speeds up the development process
 
 
 ## Usage
