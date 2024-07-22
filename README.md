@@ -10,7 +10,7 @@ Add this file to your project folder and include the header file.
 Once you've done this make sure you call initheapguard() at the start of your program.
 Now whenever you want to allocate memory to the heap do it through heapguard and all the memory will be safely wiped and freed at the end of the program.
 
-This version of heapguard only supports char * types but updates will be coming out soon allowing you to store more types of data in the future.
+Please refer to the wiki to see examples of how to allocate memory safely with heapguard
 ## Contributing
 
 Contributions are welcome! If you'd like to contribute to Velocifare, please follow these guidelines:
