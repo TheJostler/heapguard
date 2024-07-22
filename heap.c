@@ -8,6 +8,16 @@ char ***alloc_str_lst = NULL;
 int n_alloc_str_lst = 0;
 int c_alloc_str_lst = 1;
 
+void initList(List *list) {
+ list->start = n_alloc_str;
+ list->end = list->start-1;
+}
+
+void setListItem(List *list, char *word) {
+ list->end++;
+ allocstr(word);
+}
+
 char *allocstr(const char *str) {
  if (n_alloc_str == 0) {
   alloc_str = malloc(c_alloc_str*sizeof(char*));
