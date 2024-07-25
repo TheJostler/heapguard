@@ -16,7 +16,8 @@ struct list {
 
 typedef struct list List;
 
-void initList(List *list);
+void newList(List *list);
+void finishList();
 void setListItem(List *list, char *word);
 
 char *allocstr(const char *str);
