@@ -1,27 +1,20 @@
-#ifndef HEAP_GUARD_H
-#define HEAP_GUARD_H
+// list.h
+#ifndef LIST_H
+#define LIST_H
 
 #include <stdlib.h>
-#include <stdio.h>
 #include <string.h>
 #include <signal.h>
 
-extern char **alloc_str;
-extern int n_alloc_str;
+typedef struct List {
+    char **strings;
+    size_t count;
+    size_t capacity;
+} List;
 
-struct list {
- unsigned short start;
- unsigned short end;
-};
-
-typedef struct list List;
-
-void newList(List *list);
-void finishList();
-void setListItem(List *list, char *word);
-
-char *allocstr(const char *str);
-void freeall();
-int initheapguard();
+List *list_create(void);
+void list_add(List *list, const char *str);
+void list_cleanup(void);
+void init_cleanup_handler(void);
 
 #endif
